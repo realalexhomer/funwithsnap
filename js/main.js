@@ -12,22 +12,19 @@ var triRecRec = Snap.load("svgs/triangle-with-squares.svg", function(frag){
   tri1.attr('fill', 'pink');
   rect2.animate({x:1000}, 500);
 
-  rect1.animate({ry:100}, 500);
+  tri1.animate({r:50,
+                fill: "lightgreen",
+                transform: "scale(0.2)"},1000);
+
+  // rect1.animate({
+  //     transform: 'r0,250,453 s1,1'
+  // }, 1500, mina.elastic);
+
+  rect1.addClass("bounce")
+
 
 });
-  setInterval(blink('#svgout'), 1);
-function blink(elm){
-  console.log('hi')
-  elm.animate({r:90}, 200, function(){
-    elm.animate({ry:90}, 300);
-  })
-}
 
-
-
-
-
-   
 
 
 
